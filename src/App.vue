@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <MenuBar></MenuBar>
-    <ItemList></ItemList>
-	<MemoEditor></MemoEditor>
+    <MenuBar/>
+    <ItemList/>
+    <MemoEditor v-if = "$store.state.editShow"/>
   </div>
 </template>
 
@@ -12,12 +12,11 @@ import MenuBar from "./components/MenuBar.vue";
 import ItemList from "./components/ItemList.vue";
 import MemoEditor from "./components/MemoEditor.vue";
 
-
 @Component({
   components: {
     MenuBar,
-	ItemList,
-	MemoEditor
+    ItemList,
+    MemoEditor
   }
 })
 export default class App extends Vue {}
